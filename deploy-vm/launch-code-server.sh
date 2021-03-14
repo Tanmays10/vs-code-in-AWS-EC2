@@ -28,3 +28,18 @@ chown -R coder:coder /home/coder/.config
 # start and enable code-server and our helper service
 systemctl enable --now code-server@coder
 systemctl enable --now coder-cloud-redirect
+
+#Install node packages
+curl -fsSL https://deb.nodesource.com/setup_15.x | sudo bash -
+apt-get install -y nodejs
+
+#Install salesforce CLI
+npm install sfdx-cli --global
+
+#Install java JDK
+apt-get install default-jdk
+
+#install salesforce Extensions
+code --install-extension salesforce.salesforcedx-vscode-core
+
+
